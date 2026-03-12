@@ -1,12 +1,17 @@
-// FILE: src/pages/Index.tsx  — paste full file contents below
-// ─────────────────────────────────────────────────────────────
-
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Users, Lightbulb, Handshake, ArrowRight, MapPin, Clock, GraduationCap, Sparkles, Wine, Building, ShoppingBag } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Users, Lightbulb, Handshake, ArrowRight, MapPin, Clock, GraduationCap, Sparkles, Wine, Building, ShoppingBag, X } from "lucide-react";
 import { allEvents } from "@/data/events";
 import { JOTFORM_URL } from "@/lib/constants";
+import NewsletterForm from "@/components/NewsletterForm";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 /* ── Count-up hook ── */
 function useCountUp(target: number, duration = 2000) {
@@ -69,13 +74,31 @@ const services = [
 
 const Index = () => {
   const [activeTest, setActiveTest] = useState(0);
+  const [showNewsletter, setShowNewsletter] = useState(false);
   const stat1 = useCountUp(1000);
   const stat2 = useCountUp(15);
 
   useEffect(() => {
     const t = setInterval(() => setActiveTest((p) => (p + 1) % testimonials.length), 5000);
-    return () => clearInterval(t);
+    
+    // Show newsletter popup after 5 seconds
+    const popupTimer = setTimeout(() => {
+      const hasSeenPopup = localStorage.getItem("has_seen_newsletter_popup");
+      if (!hasSeenPopup) {
+        setShowNewsletter(true);
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(t);
+      clearTimeout(popupTimer);
+    };
   }, []);
+
+  const handleCloseNewsletter = () => {
+    setShowNewsletter(false);
+    localStorage.setItem("has_seen_newsletter_popup", "true");
+  };
 
   return (
     <>
@@ -401,6 +424,41 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ── NEWSLETTER POPUP ── */}
+      <Dialog open={showNewsletter} onOpenChange={setShowNewsletter}>
+        <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden border-none rounded-3xl">
+          <div className="relative">
+            {/* Background Image/Pattern */}
+            <div className="bg-navy p-10 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-teal/10 opacity-50" />
+              <div className="relative z-10">
+                <div className="w-12 h-1 bg-gold mx-auto mb-6" />
+                <DialogTitle className="font-headline text-3xl font-bold uppercase text-primary-foreground mb-2">
+                  Stay Connected
+                </DialogTitle>
+                <DialogDescription className="text-primary-foreground/60 font-body text-base">
+                  Join our community of entrepreneurs and get the latest resources delivered to your inbox.
+                </DialogDescription>
+              </div>
+            </div>
+            
+            <div className="p-8 bg-white">
+              <NewsletterForm />
+              <p className="mt-4 text-center text-[10px] text-charcoal/40 font-body">
+                By subscribing, you agree to receive updates from BizStarts Milwaukee.
+              </p>
+            </div>
+
+            <button 
+              onClick={handleCloseNewsletter}
+              className="absolute top-4 right-4 text-primary-foreground/40 hover:text-primary-foreground transition-colors"
+            >
+              <X size={20} />
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };

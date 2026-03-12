@@ -11,6 +11,7 @@ const navLinks = [
       { label: "Instituto Latino", to: "/instituto-latino" },
       { label: "Coaching", to: "/coaching" },
       { label: "Capital Catalyst Grant", to: "/capital-catalyst" },
+      { label: "George Mosher Scholarship", to: "/scholarship" },
     ],
   },
   { label: "Entrepreneurs", to: "/entrepreneurs" },
