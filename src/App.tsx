@@ -9,9 +9,12 @@ import About from "./pages/About";
 import Entrepreneurs from "./pages/Entrepreneurs";
 import Programming from "./pages/Programming";
 import Events from "./pages/Events";
-import Blog from "./pages/Blog";
+import NewsAndResources from "./pages/NewsAndResources";
 import Contact from "./pages/Contact";
 import InstitutoLatino from "./pages/InstitutoLatino";
+import AnnualEvent from "./pages/AnnualEvent";
+import Scholarship from "./pages/Scholarship";
+import FirstLaunch from "./pages/FirstLaunch";
 import CapitalCatalyst from "./pages/CapitalCatalyst";
 import Coaching from "./pages/Coaching";
 import Membership from "./pages/Membership";
@@ -34,12 +37,15 @@ const App = () => (
       <Route path="/entrepreneurs" element={<Entrepreneurs />} />
       <Route path="/programming" element={<Programming />} />
       <Route path="/events" element={<Events />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path="/news-and-resources" element={<NewsAndResources />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/instituto-latino" element={<InstitutoLatino />} />
       <Route path="/capital-catalyst" element={<CapitalCatalyst />} />
       <Route path="/coaching" element={<Coaching />} />
       <Route path="/membership" element={<Membership />} />
+      <Route path="/annual-event" element={<AnnualEvent />} />
+      <Route path="/scholarship" element={<Scholarship />} />
+      <Route path="/first-launch" element={<FirstLaunch />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </Routes>

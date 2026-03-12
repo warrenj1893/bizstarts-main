@@ -15,8 +15,8 @@ const navLinks = [
   },
   { label: "Entrepreneurs", to: "/entrepreneurs" },
   { label: "Events", to: "/events" },
-  { label: "Blog", to: "/blog" },
-  { label: "Membership", to: "/membership" },
+  { label: "News and Resources", to: "/news-and-resources" },
+  { label: "Become a Member", to: "/membership" },
   { label: "Contact", to: "/contact" },
 ];
 

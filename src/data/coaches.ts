@@ -12,11 +12,11 @@ export interface Coach {
 
 export const coaches: Coach[] = [
   {
-    name: "Rossie Manka",
+    name: "Rossie Manks",
     tag: "Community & Wellness",
     accent: "bg-teal",
     img: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=800&h=800&fit=crop&crop=face",
-    bio: "People that know Rossie say she is an encourager through life-giving words. She holds an Associate's of Science in Civil Engineer Technology and a Bachelor's in Construction Management & Trades. She is the founder of Journey2Alignment Coaching Services, a graduate of UWM Ext. and Defy Ventures Entrepreneurial program, and has spent time coaching entrepreneurs at RYOC and Ellsworth Correctional Facility. She is certified to mentor re-entry women through EXPO.",
+    bio: "Meet Rossie, an Author, Speaker, Coach & Project Manager for digital products. Here to support you on your entrepreneurial journey. People that know Rossie, say she is an encourager through life-giving words that lifts them out of whatever negative emotion or situation they are in, because we must persevere and run the race marked out for us.\n\nShe holds an Associate’s of Science in Civil Engineer Technology, Bachelor’s in Construction Management & Trades and is a Certified Coach. Formally a Civil Engineering Aide/Resident Inspector & CAD Drafter who worked for the private and public sectors.\n\nShe then took her career and education a step further by becoming a local business owner & founder of Journey2Alignment Coaching Services and graduated from UWM Ext. and Defy Ventures Entrepreneurship program.\n\nShe is committed to the community and enjoys ministry outreach.\n\nWork with Rossie and become a part of the BizStarts Family.",
   },
   {
     name: "Thaime Nañez",
@@ -30,13 +30,13 @@ export const coaches: Coach[] = [
     tag: "Finance & Operations",
     accent: "bg-gold",
     img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&crop=face",
-    bio: "Brent, MKE's Small Business Coach, works with small business owners and entrepreneurs to transform their hard work into hard cash. By blending empathy, insight, and a dose of humor into his unique focus on financial fitness, operational overhaul, and selling your story, small business owners get the confidence, comfort, and capability to reach their goals. A Chartered Financial Analyst, Brent has coached over 600 small businesses and hosts the #EntrepreneurEncounters Podcast.",
+    bio: "Brent Halfwassen is an experienced business owner and operator, and possesses invaluable first-hand experience with the challenges and successes of business ownership. As a four-time business owner himself, Brent understands the critical importance of aligning vision, implementing effective processes, and building the right team to drive business growth.",
   },
   {
-    name: "Cheryl Moore",
+    name: "Dr. Cheryl S. Moore",
     tag: "Business Development",
     accent: "bg-teal",
-    img: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=800&fit=crop&crop=face",
-    bio: "Cheryl Moore is an experienced entrepreneur coach dedicated to helping Milwaukee business owners find clarity and confidence in their journey. With a deep commitment to community and practical business development, Cheryl meets entrepreneurs where they are and helps them build toward sustainable, lasting growth.",
+    img: "/cheryl-moore.png",
+    bio: "Dr. Cheryl S. Moore Transformational Business Mentor | Entrepreneur & Educator | Writer & Visionary\n\nDr. Cheryl S. Moore is an award-winning strategist, spiritual mentor, and entrepreneurial thought leader with over 25 years of experience at the intersection of education, business, and equity.\n\nA former Executive Director of Career Development and Business Department Chair, Dr. Moore has secured funding, increased institutional revenue by 50%, and designed career-aligned programs adopted across multiple sectors. Her work integrates community engagement with fiscal strategy—positioning her as a bridge between industry innovation and grassroots empowerment.\n\nRecipient of the Presidential Award for Civic Action and Engagement at Cardinal Stritch University, and multiple Faculty of the Year nominations, Dr. Moore is known for mentoring across generations—from doctoral students and nonprofit leaders to corporate founders and creatives rediscovering their voice. She is a 3-time featured mentor for the National Mentoring Mondays hosted by the Milwaukee Business Journal, where she empowers emerging leaders. She blends profit strategy with purpose mapping, helping clients scale their visions without sacrificing their values.\n\nDeeply influenced by her pilgrimage to India and studies in Gandhian philosophy, she infuses nonviolence, ethical leadership, and community-centered practices into her mentoring. Her approach centers on liberation, stewardship, and clarity—guiding entrepreneurs to build ventures that transform systems, and uplift communities.\n\nAs Founder of Career Activist LLP, Dr. Moore designs and delivers transformative experiences. Dr. Moore curates reflective tools, short-form eBooks, learning modules that activate clarity, confidence, and support lifelong reinvention for women navigating professional rebirth. Her practice is not traditional coaching—it’s strategic mentoring. Partner organizations benefit from her unique ability to translate insight into impact while advancing organizational goals. Her offerings include group workshops, curriculum design, and professional development intensives.",
   },
 ];

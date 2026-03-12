@@ -44,14 +44,24 @@ const boardMembers = [
 
 const testimonials = [
   { quote: "BizStarts truly saved my business. I was ready to give up after almost four years and go back to the corporate world. The staff were so loving and caring. They truly encouraged me to stay in the game. I'm beyond grateful for all that they do—not just for businesses, but for the people behind them.", name: "Christal Shipp", business: "CTRLC" },
-  { quote: "Greenhaven was lucky enough to be accepted into the latest BizStarts Institute cohort 7 in 2024. I learned how to better the business and made some valuable connections. Everything from planning and strategy to understanding customers was covered and I use the knowledge that I gained everyday.", name: "Jessica Tassoul", business: "GreenHaven" },
+  { 
+    quote: "Greenhaven was lucky enough to be accepted into the latest BizStarts Institute cohort 7 in 2024. I learned how to better the business and made some valuable connections. Everything from planning and strategy to understanding customers was covered and I use the knowledge that I gained everyday.", 
+    name: "Jessica Tassoul", 
+    business: "GreenHaven",
+    img: "/jessica-tassoul.jpg?v=2"
+  },
   { quote: "BizStarts has been an invaluable part of my entrepreneurial journey. Their support, resources, and mentorship have helped me refine my business strategy and gain clarity on my goals. The community at BizStarts is truly inspiring.", name: "Dayanne Quintero", business: "" },
-  { quote: "BizStarts changed my life. I thought about giving up on my business because I was exhausted and confused. This community and the BizStarts Institute reminded me that it is all possible in smaller steps.", name: "Emily Honor Hubbard", business: "" },
+  { 
+    quote: "BizStarts changed my life. I thought about giving up on my business because I was exhausted and confused. This community and the BizStarts Institute reminded me that it is all possible in smaller steps.", 
+    name: "Emily Honor Hubbard", 
+    business: "",
+    img: "/emily-hubbard.jpg?v=2"
+  },
 ];
 
 const programs = [
   { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", link: "/programming", img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" },
-  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", link: "/about", img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" },
+  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", link: "/first-launch", img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" },
   { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", link: "/events", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" },
 ];
 
@@ -325,12 +335,19 @@ const About = () => {
                   <blockquote className={`font-body text-lg leading-relaxed flex-1 ${i % 3 === 2 ? "text-charcoal/70" : "text-primary-foreground/80"}`}>
                     {t.quote}
                   </blockquote>
-                  <div className="mt-6 pt-6 border-t border-primary-foreground/10">
+                  <div className="mt-6 pt-6 border-t border-primary-foreground/10 flex items-center gap-4">
+                    {t.img ? (
+                      <img src={t.img} alt={t.name} className={`w-12 h-12 rounded-full object-cover border-2 shadow-sm ${i % 3 === 2 ? "border-navy/20" : "border-teal"}`} />
+                    ) : (
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${i % 3 === 2 ? "bg-navy/10 text-navy" : "bg-teal/20 text-teal"}`}>
+                       {t.name.charAt(0)}
+                      </div>
+                    )}
                     <p className={`font-barlow font-bold ${i % 3 === 2 ? "text-navy" : "text-primary-foreground"}`}>
                       {t.name}
                       {t.business && (
-                        <span className={`font-normal ml-2 ${i % 3 === 0 ? "text-teal" : i % 3 === 1 ? "text-gold" : "text-teal"}`}>
-                          — {t.business}
+                        <span className={`font-normal block text-sm ${i % 3 === 0 ? "text-teal" : i % 3 === 1 ? "text-gold" : "text-teal"}`}>
+                          {t.business}
                         </span>
                       )}
                     </p>
@@ -366,6 +383,10 @@ const About = () => {
                   <Link to="/programming" className="flex items-center gap-3 text-primary-foreground/80 font-barlow font-semibold hover:text-primary-foreground transition-colors group">
                     <ArrowRight size={16} className="text-gold group-hover:translate-x-1 transition-transform" />
                     Sign up for the BizStarts Institute
+                  </Link>
+                  <Link to="/first-launch" className="flex items-center gap-3 text-primary-foreground/80 font-barlow font-semibold hover:text-primary-foreground transition-colors group">
+                    <ArrowRight size={16} className="text-gold group-hover:translate-x-1 transition-transform" />
+                    Learn about First Launch
                   </Link>
                   <Link to="/coaching" className="flex items-center gap-3 text-primary-foreground/80 font-barlow font-semibold hover:text-primary-foreground transition-colors group">
                     <ArrowRight size={16} className="text-gold group-hover:translate-x-1 transition-transform" />

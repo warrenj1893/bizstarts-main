@@ -84,9 +84,7 @@ const Footer = () => (
     <div className="border-t border-primary-foreground/10 py-4">
       <div className="container flex flex-col md:flex-row items-center justify-between text-xs text-primary-foreground/50 gap-2">
         <p>Copyright © 2026 BizStarts, Inc. | All Rights Reserved</p>
-        <span className="bg-primary-foreground/10 px-3 py-1 rounded text-[10px] font-barlow">
-          Candid Platinum Seal 2026
-        </span>
+        <img src="/candid-seal-platinum-2026.png" alt="Candid Platinum Transparency 2026" className="h-10 w-auto opacity-90" />
       </div>
     </div>
   </footer>

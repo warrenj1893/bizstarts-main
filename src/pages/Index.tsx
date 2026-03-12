@@ -3,7 +3,7 @@
 
 import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Users, Lightbulb, Handshake, ArrowRight, MapPin, Clock } from "lucide-react";
+import { Users, Lightbulb, Handshake, ArrowRight, MapPin, Clock, GraduationCap, Sparkles, Wine, Building, ShoppingBag } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { allEvents } from "@/data/events";
 import { JOTFORM_URL } from "@/lib/constants";
@@ -38,9 +38,20 @@ function useCountUp(target: number, duration = 2000) {
 }
 
 const testimonials = [
-  { quote: "BizStarts has shown me that you don't have to do it alone. They are a great sounding board for me. They really care about my success.", name: "Adam Draeger", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" },
-  { quote: "Coaching helped affirm my priorities and gave me confidence that there's a market for my service offerings and price points.", name: "Jessy Servi Ortiz", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face" },
-  { quote: "BizStarts will get you focused. They won't be easy on you; you'll have to work. But it's really changed my life — boosted my confidence.", name: "Brooks Griffin", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face" },
+  { quote: "BizStarts truly saved my business. I was ready to give up after almost four years and go back to the corporate world. The staff were so loving and caring. They truly encouraged me to stay in the game.", name: "Christal Shipp", business: "CTRLC", img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face" },
+  {
+    quote: "Greenhaven was lucky enough to be accepted into the latest BizStarts Institute cohort 7 in 2024. I learned how to better the business and made some valuable connections. Everything from planning and strategy to understanding customers was covered and I use the knowledge that I gained everyday.",
+    name: "Jessica Tassoul",
+    business: "GreenHaven",
+    img: "/jessica-tassoul.jpg?v=2"
+  },
+  { quote: "BizStarts has been an invaluable part of my entrepreneurial journey. Their support, resources, and mentorship have helped me refine my business strategy and gain clarity on my goals.", name: "Dayanne Quintero", business: "", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" },
+  { 
+    quote: "BizStarts changed my life. I thought about giving up on my business because I was exhausted and confused. This community reminded me that it is all possible in smaller steps.", 
+    name: "Emily Honor Hubbard", 
+    business: "", 
+    img: "/emily-hubbard.jpg?v=2" 
+  },
 ];
 
 const sponsors = ["WEDC", "Wells Fargo", "Town Bank Wintrust", "LISC Milwaukee", "Greater Milwaukee Foundation", "Associated Bank", "BMO", "Heartland Bank", "US Bank", "EY", "Godfrey & Kahn", "DeWitt", "Taureau Group", "WHEDA"];
@@ -48,9 +59,12 @@ const sponsors = ["WEDC", "Wells Fargo", "Town Bank Wintrust", "LISC Milwaukee",
 
 
 const services = [
-  { icon: Users,      img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80", title: "One-on-One Coaching",    desc: "Work with a business coach to explore your ideas and create an actionable plan to gain traction." },
-  { icon: Handshake,  img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80", title: "Personalized Education", desc: "Hands-on entrepreneurial education designed for new and growing business owners through structured programs." },
-  { icon: Lightbulb,  img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80", title: "Business Connections",   desc: "Tap into our network of resources, partners, and entrepreneurs to find exactly the right people for your growth." },
+  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" },
+  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" },
+  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" },
+  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" },
+  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" },
 ];
 
 const Index = () => {
@@ -84,12 +98,12 @@ const Index = () => {
             </p>
             <h1
               className="font-headline font-bold uppercase text-primary-foreground leading-[0.92] max-w-4xl"
-              style={{ fontSize: "clamp(52px, 9vw, 112px)", letterSpacing: "-0.02em" }}
+              style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.01em" }}
             >
-              Opportunity<br />Through<br /><span className="text-teal">Entrepreneurship</span>
+              Creating Opportunities<br />Through<br /><span className="text-teal">Entrepreneurship</span>
             </h1>
             <p className="mt-8 text-primary-foreground/65 font-body text-xl max-w-lg leading-relaxed">
-              Whether your business is pre-revenue or already open, we provide structured guidance to clear the path for your next step forward — free.
+              Whether your business is in the pre-revenue stage or your doors are already open, we provide structured guidance to clear the path for your next step forward!
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/entrepreneurs" className="btn-primary text-lg px-10 py-4 flex items-center gap-2">
@@ -135,19 +149,31 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 130}>
-                <div className="group relative overflow-hidden rounded-2xl shadow-xl h-[400px]">
+                <div className="group relative overflow-hidden rounded-3xl shadow-xl h-[420px] bg-card">
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover object-[center_60%] group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/92 via-navy/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="w-11 h-11 rounded-full bg-teal flex items-center justify-center mb-4">
-                      <s.icon size={20} className="text-primary-foreground" />
+                  
+                  {/* Creative overlay at the bottom */}
+                  <div className="absolute inset-x-0 bottom-0 bg-navy/95 backdrop-blur-md border-t border-primary-foreground/10 p-6 pt-8 h-[220px] flex flex-col justify-start translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                    
+                    {/* Floating Icon */}
+                    <div className="absolute -top-7 left-6 w-14 h-14 rounded-full bg-teal flex items-center justify-center shadow-lg border-4 border-navy group-hover:-translate-y-1 transition-transform duration-300">
+                      <s.icon size={24} className="text-primary-foreground" />
                     </div>
-                    <h3 className="font-headline text-2xl font-bold uppercase text-primary-foreground leading-tight">{s.title}</h3>
-                    <p className="mt-2 text-primary-foreground/60 font-body text-sm leading-relaxed">{s.desc}</p>
+
+                    {/* Fixed height container for headers to ensure subtext aligns */}
+                    <div className="h-[60px] flex items-start">
+                      <h3 className="font-headline text-xl lg:text-2xl font-bold uppercase text-primary-foreground leading-tight line-clamp-2">
+                        {s.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="mt-2 text-primary-foreground/70 font-body text-sm leading-relaxed line-clamp-3">
+                      {s.desc}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -319,31 +345,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── SPONSORS ── */}
-      <section className="py-14 bg-card overflow-hidden">
-        <div className="container mb-8">
-          <div className="flex items-center gap-4">
-            <div className="h-px flex-1 bg-border" />
-            <p className="font-barlow font-semibold text-[11px] uppercase tracking-[0.22em] text-navy/35 whitespace-nowrap">
-              All Made Possible By Our Incredible Sponsors
-            </p>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-        </div>
-        <div className="relative">
-          <div className="flex animate-scroll-left w-max">
-            {[...sponsors, ...sponsors].map((s, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 mx-3 px-7 py-4 bg-off-white rounded-xl border border-border flex items-center justify-center min-w-[155px]"
-              >
-                <span className="font-barlow font-bold text-sm text-charcoal/35 uppercase tracking-wider">{s}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FINAL CTA ── */}
       <section className="py-24 bg-teal relative overflow-hidden">
         <div
@@ -373,6 +374,31 @@ const Index = () => {
           >
             Begin BizStarts <ArrowRight size={20} />
           </Link>
+        </div>
+      </section>
+
+      {/* ── SPONSORS ── */}
+      <section className="py-14 bg-card overflow-hidden">
+        <div className="container mb-8">
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-border" />
+            <p className="font-barlow font-semibold text-[11px] uppercase tracking-[0.22em] text-navy/35 whitespace-nowrap">
+              All Made Possible By Our Incredible Sponsors
+            </p>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+        </div>
+        <div className="relative">
+          <div className="flex animate-scroll-left w-max">
+            {[...sponsors, ...sponsors].map((s, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 mx-3 px-7 py-4 bg-off-white rounded-xl border border-border flex items-center justify-center min-w-[155px]"
+              >
+                <span className="font-barlow font-bold text-sm text-charcoal/35 uppercase tracking-wider">{s}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

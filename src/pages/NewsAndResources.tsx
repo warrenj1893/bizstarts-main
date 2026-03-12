@@ -1,4 +1,5 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
+import BusinessModelCanvas from "@/components/BusinessModelCanvas";
 
 const posts = [
   {
@@ -9,18 +10,20 @@ const posts = [
     featured: true,
   },
   {
-    title: "How to Find Your First Customer in Milwaukee",
-    excerpt: "Your first customer is the hardest to get. Here are practical, local strategies to land that crucial first sale in the Milwaukee market.",
+    title: "Milwaukee Barter: Trade Your Services",
+    excerpt: "Conserve cash and expand your business reach by trading your goods and services directly with other local businesses using the Milwaukee Barter platform.",
     cat: "Strategy",
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80",
     featured: false,
+    link: "https://milwaukeebarter.com/",
   },
   {
-    title: "Building Your Business Plan: Where to Start",
-    excerpt: "A business plan doesn't have to be 50 pages. Learn how to build a lean, actionable plan that gets results and attracts support.",
+    title: "Start Planning: The Business Model Canvas",
+    excerpt: "A business plan doesn't have to be 50 pages. Use our interactive Business Model Canvas at the top of this page to build a lean, actionable plan today.",
     cat: "Planning",
     img: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80",
     featured: false,
+    link: "#canvas",
   },
   {
     title: "The Power of Mentorship in Entrepreneurship",
@@ -57,7 +60,7 @@ const catColors: Record<string, string> = {
 const featured = posts[0];
 const grid = posts.slice(1);
 
-const Blog = () => (
+const NewsAndResources = () => (
   <>
     {/* Hero — editorial masthead */}
     <section className="bg-navy py-16 md:py-24 overflow-hidden relative">
@@ -67,9 +70,9 @@ const Blog = () => (
       >
         <span
           className="font-headline font-bold uppercase text-primary-foreground/[0.03] whitespace-nowrap"
-          style={{ fontSize: "clamp(80px, 18vw, 220px)", letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(60px, 14vw, 200px)", letterSpacing: "-0.02em" }}
         >
-          COACH'S CORNER
+          NEWS & RESOURCES
         </span>
       </div>
       <div className="relative z-10 container text-center">
@@ -82,11 +85,11 @@ const Blog = () => (
         </div>
         <h1
           className="font-headline font-bold uppercase text-primary-foreground leading-none"
-          style={{ fontSize: "clamp(52px, 10vw, 120px)", letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(48px, 9vw, 110px)", letterSpacing: "-0.02em" }}
         >
-          Coach's
+          News &
           <br />
-          <span className="text-teal">Corner</span>
+          <span className="text-teal">Resources</span>
         </h1>
         <p className="mt-6 text-primary-foreground/60 font-body text-lg max-w-xl mx-auto">
           Tips, stories, and resources from the BizStarts community.
@@ -98,6 +101,10 @@ const Blog = () => (
           </span>
           <div className="h-px flex-1 max-w-xs bg-primary-foreground/10" />
         </div>
+
+        <ScrollReveal>
+          <BusinessModelCanvas />
+        </ScrollReveal>
       </div>
     </section>
 
@@ -182,10 +189,11 @@ const Blog = () => (
                     {p.excerpt}
                   </p>
                   <a
-                    href="#"
+                    href={(p as any).link || "#"}
+                    target={(p as any).link?.startsWith("http") ? "_blank" : undefined}
                     className="mt-4 inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm"
                   >
-                    Read More →
+                    { (p as any).link?.startsWith("http") ? "Visit Site →" : "Read More →" }
                   </a>
                 </div>
               </article>
@@ -219,10 +227,11 @@ const Blog = () => (
                     {p.excerpt}
                   </p>
                   <a
-                    href="#"
+                    href={(p as any).link || "#"}
+                    target={(p as any).link?.startsWith("http") ? "_blank" : "_self"}
                     className="mt-5 inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm hover:gap-4 transition-all"
                   >
-                    Read More →
+                    { (p as any).link?.startsWith("http") ? "Visit Site →" : ((p as any).link?.startsWith("#") ? "Get Started →" : "Read More →") }
                   </a>
                 </div>
               </article>
@@ -270,4 +279,4 @@ const Blog = () => (
   </>
 );
 
-export default Blog;
+export default NewsAndResources;

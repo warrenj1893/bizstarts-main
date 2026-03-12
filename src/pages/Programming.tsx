@@ -96,7 +96,7 @@ const Programming = () => {
             <div className="flex flex-col sm:flex-row gap-6">
               {/* Date badge */}
               <div className="bg-teal rounded-xl px-6 py-5 text-center text-primary-foreground flex-shrink-0 self-start">
-                <p className="font-barlow font-bold text-[10px] uppercase leading-none mb-1">Spring</p>
+                <p className="font-barlow font-bold text-[10px] uppercase leading-none mb-1">Fall</p>
                 <p className="font-headline text-5xl font-bold leading-none">26</p>
                 <p className="font-barlow font-bold text-[10px] uppercase leading-none mt-1">2026</p>
               </div>
@@ -110,7 +110,7 @@ const Programming = () => {
                 <div className="mt-5 space-y-2.5 text-charcoal/65 font-body text-sm">
                   <div className="flex items-start gap-2.5">
                     <Calendar size={15} className="text-teal flex-shrink-0 mt-0.5" />
-                    Sunday, February 22 – Sunday, March 29, 2026 · 6 consecutive Sundays
+                    Fall 2026 · 6 consecutive Sundays
                   </div>
                   <div className="flex items-start gap-2.5">
                     <MapPin size={15} className="text-teal flex-shrink-0 mt-0.5" />
@@ -118,10 +118,10 @@ const Programming = () => {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Clock size={15} className="text-teal flex-shrink-0 mt-0.5" />
-                    IHEP Mindset Training: April 4 & April 11 (Virtual)
+                    IHEP Mindset Training: Dates TBD (Virtual)
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-4">
                   <a
                     href={APPLY_URL}
                     target="_blank"
@@ -129,6 +129,22 @@ const Programming = () => {
                     className="btn-primary text-base px-10 py-3 inline-flex items-center gap-2"
                   >
                     Apply Here <ArrowRight size={16} />
+                  </a>
+                  <a
+                    href="https://www.carthage.edu/about/divisions-centers-institutes/school-of-business-economics/bizstarts-kenosha/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border-2 border-teal bg-transparent px-8 py-3 font-barlow font-bold text-teal hover:bg-teal hover:text-white transition-all duration-200 inline-flex"
+                  >
+                    Bizstarts Kenosha
+                  </a>
+                  <a
+                    href="https://rcedc.org/bre/bizstarts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border-2 border-teal bg-transparent px-8 py-3 font-barlow font-bold text-teal hover:bg-teal hover:text-white transition-all duration-200 inline-flex"
+                  >
+                    Bizstarts Racine
                   </a>
                 </div>
               </div>
@@ -148,10 +164,10 @@ const Programming = () => {
                   About BizStarts Institute
                 </h2>
                 <p className="mt-6 text-charcoal/70 font-body text-lg leading-relaxed">
-                  For over a decade, BizStarts has been empowering entrepreneurs across the Milwaukee region. In response to the need for structured, accessible entrepreneurship education — especially for those overcoming adversity — we created the BizStarts Institute.
+                  BizStarts has been serving entrepreneurs in the Milwaukee region for over a decade. Seeing the need in our community for a credentialed system of learning "Entrepreneurship in Adversity", we started the BizStarts Institute. Since 2020, we have been offering the BizStarts Institute to the Milwaukee community.
                 </p>
                 <p className="mt-4 text-charcoal/70 font-body text-lg leading-relaxed">
-                  Since 2020, the BizStarts Institute has supported entrepreneurs through multiple cohorts offered in English and Spanish, and now proudly provides accommodations for Deaf and Hard-of-Hearing participants.
+                  Since the program's inception, BizStarts has expanded its reach and accessibility by providing ASL interpreters, translating the curriculum into Spanish, and partnering with organizations in Racine and Kenosha to deliver the Institute to even more entrepreneurs.
                 </p>
               </div>
             </ScrollReveal>
@@ -159,10 +175,10 @@ const Programming = () => {
             <ScrollReveal delay={120}>
               <div className="lg:pt-14">
                 <p className="text-charcoal/70 font-body text-lg leading-relaxed">
-                  BizStarts sought support from University of Notre Dame Professor Michael Morris, whose programs are renowned for creating companies from people in poverty throughout the world.
+                  In creating this program BizStarts sought support from University of Notre Dame Professor and Director of the Urban Poverty Business Initiative, Michael Morris. Michael's programs are renowned for creating companies from people in poverty throughout the world.
                 </p>
                 <p className="mt-4 text-charcoal/70 font-body text-lg leading-relaxed">
-                  BizStarts Institute is an intense, hands-on exposure to the fundamentals of launching and growing a successful venture, taught by seasoned faculty, subject matter experts, and successful entrepreneurs. Year-long mentorship is available after the initial 6-week program!
+                  BizStarts Institute is an intense, hands-on exposure to the fundamentals of launching and growing a successful venture, taught by seasoned faculty, subject matter experts, and successful entrepreneurs. The bootcamp occurs on six consecutive Sunday Afternoons. Year-long mentorship is available after the initial 6-week program!
                 </p>
               </div>
             </ScrollReveal>
@@ -181,7 +197,7 @@ const Programming = () => {
                 { label: "Sales",      action: "actively seek real customers" },
               ].map((item) => (
                 <div key={item.label} className="py-8 px-10 text-center">
-                  <p className="font-barlow font-bold text-primary-foreground/25 text-[11px] uppercase tracking-widest mb-3">
+                  <p className="font-barlow font-bold text-white text-[11px] uppercase tracking-widest mb-3">
                     You won't just learn
                   </p>
                   <p className="font-headline text-3xl font-bold uppercase text-teal">{item.label}</p>
@@ -190,9 +206,6 @@ const Programming = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-primary-foreground/20 font-barlow font-semibold text-[10px] uppercase tracking-[0.25em] mt-8">
-              Our Teach-by-Doing Approach
-            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -275,7 +288,7 @@ const Programming = () => {
                   After the bootcamp, graduates complete two virtual sessions based on the Ice House Entrepreneurship Program (Small Business Edition) — certified by the Kauffman Foundation.
                 </p>
                 <p className="mt-4 text-charcoal/70 font-body text-lg leading-relaxed">
-                  Spring 2026 dates: <strong className="text-navy">April 4 & April 11</strong> (Virtual).
+                  Fall 2026 dates: <strong className="text-navy">TBD</strong> (Virtual).
                 </p>
               </div>
             </ScrollReveal>
@@ -295,6 +308,26 @@ const Programming = () => {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* ── STUDENT CONSULTANT ── */}
+      <section className="py-16 bg-card border-t border-border">
+        <div className="container max-w-4xl text-center">
+          <ScrollReveal>
+            <h3 className="font-headline text-3xl font-bold uppercase text-navy mb-4">
+              Student Consultant Program
+            </h3>
+            <p className="text-charcoal/70 font-body text-lg mb-8 max-w-2xl mx-auto">
+              Interested in being a student consultant? Send us an email!
+            </p>
+            <a
+              href="mailto:info@bizstarts.com"
+              className="btn-primary text-base px-8 py-3 inline-flex items-center gap-2"
+            >
+              Contact Us
+            </a>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -319,16 +352,34 @@ const Programming = () => {
             Ready to Start?
           </h2>
           <p className="mt-4 text-primary-foreground/75 font-body text-xl max-w-lg mx-auto">
-            Apply now for the next BizStarts Institute cohort — spring 2026 is enrolling now.
+            Apply now for the next BizStarts Institute cohort — fall 2026 is enrolling now.
           </p>
-          <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-primary-foreground px-12 py-5 font-barlow font-bold text-teal text-lg shadow-xl hover:text-navy hover:-translate-y-1 transition-all duration-200"
-          >
-            Apply Today <ArrowRight size={20} />
-          </a>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href={APPLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-primary-foreground px-12 py-4 font-barlow font-bold text-teal text-[15px] shadow-xl hover:text-navy hover:-translate-y-1 transition-all duration-200"
+            >
+              Apply Today <ArrowRight size={18} className="inline ml-1" />
+            </a>
+            <a
+              href="https://www.carthage.edu/about/divisions-centers-institutes/school-of-business-economics/bizstarts-kenosha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border-2 border-primary-foreground bg-transparent px-8 py-4 font-barlow font-bold text-primary-foreground hover:bg-primary-foreground hover:text-teal transition-all duration-200"
+            >
+              Bizstarts Kenosha
+            </a>
+            <a
+              href="https://rcedc.org/bre/bizstarts/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border-2 border-primary-foreground bg-transparent px-8 py-4 font-barlow font-bold text-primary-foreground hover:bg-primary-foreground hover:text-teal transition-all duration-200"
+            >
+              Bizstarts Racine
+            </a>
+          </div>
         </div>
       </section>
     </>

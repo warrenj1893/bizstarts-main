@@ -38,7 +38,7 @@ const Coaching = () => (
             className="font-headline font-bold uppercase text-primary-foreground leading-none max-w-3xl"
             style={{ fontSize: "clamp(48px, 9vw, 108px)", letterSpacing: "-0.02em" }}
           >
-            Meet Your<br /><span className="text-teal">Coaches.</span>
+            Meet Your<br /><span className="text-teal">Coaches</span>
           </h1>
           <p className="mt-6 text-primary-foreground/60 font-body text-xl max-w-xl leading-relaxed">
             Real entrepreneurs with real experience — dedicated to helping you build something that lasts.
@@ -141,6 +141,32 @@ const Coaching = () => (
             <p className="mt-4 text-primary-foreground/50 font-body text-lg max-w-xl mx-auto">
               Schedule your free first appointment. Available virtually and in person — at no cost.
             </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={50}>
+          <div className="grid sm:grid-cols-3 gap-6 mb-12">
+            <div className="bg-card/10 border border-primary-foreground/10 rounded-xl p-6 text-center text-primary-foreground">
+              <span className="font-headline text-3xl font-bold text-teal block mb-2">01</span>
+              <h3 className="font-barlow font-bold uppercase tracking-wider mb-2">Application</h3>
+              <p className="font-body text-sm text-primary-foreground/60">
+                Start by filling out a short intake form to help us understand your business needs.
+              </p>
+            </div>
+            <div className="bg-card/10 border border-primary-foreground/10 rounded-xl p-6 text-center text-primary-foreground">
+              <span className="font-headline text-3xl font-bold text-teal block mb-2">02</span>
+              <h3 className="font-barlow font-bold uppercase tracking-wider mb-2">Meeting</h3>
+              <p className="font-body text-sm text-primary-foreground/60">
+                Meet with our intake team to review your application and discuss your specific goals.
+              </p>
+            </div>
+            <div className="bg-card/10 border border-primary-foreground/10 rounded-xl p-6 text-center text-primary-foreground">
+              <span className="font-headline text-3xl font-bold text-teal block mb-2">03</span>
+              <h3 className="font-barlow font-bold uppercase tracking-wider mb-2">Assignment</h3>
+              <p className="font-body text-sm text-primary-foreground/60">
+                Get paired with the perfect coach who has the right expertise for your venture.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
 
