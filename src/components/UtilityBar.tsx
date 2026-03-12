@@ -1,4 +1,4 @@
-// FILE: src/components/UtilityBar.tsx
+// FILE: src/components/UtilityBar.tsx - v1.1 Fix Scholarship Link
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SOCIAL_LINKS } from "@/lib/constants";
