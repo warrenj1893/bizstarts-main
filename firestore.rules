@@ -7,13 +7,15 @@ service cloud.firestore {
       allow read: if true;
       
       // Allow anyone to create a testimonial, but only if they follow the schema
-      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'memory', 'timestamp'])
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'title', 'quote', 'createdAt', 'approved'])
                    && request.resource.data.name is string
                    && request.resource.data.email is string
-                   && request.resource.data.memory is string
-                   && request.resource.data.timestamp is timestamp
-                   && request.resource.data.memory.size() > 0
-                   && request.resource.data.memory.size() < 1000;
+                   && request.resource.data.title is string
+                   && request.resource.data.quote is string
+                   && request.resource.data.createdAt is timestamp
+                   && request.resource.data.approved == true
+                   && request.resource.data.quote.size() > 0
+                   && request.resource.data.quote.size() < 2000;
       
       // Deny update and delete by default (can only be done via Firebase Console)
       allow update, delete: if false;

@@ -3,6 +3,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, where, getDocs } from "firebase/firestore";
 import { Heart, Quote, CreditCard, Mail } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 // Simulating a simple profanity filter
 const PROFANITY_LIST = ["damn", "hell", "crap", "shit", "fuck", "bitch", "ass", "bastard"];
@@ -73,6 +74,19 @@ export default function Scholarship() {
         createdAt: serverTimestamp(),
         approved: true // Default to true but can be moderated later
       });
+
+      // Send notification email for moderation/approval
+      try {
+        await supabase.functions.invoke("send-scholarship-email", {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          },
+        });
+      } catch (emailError) {
+        console.error("Error sending scholarship email notification:", emailError);
+      }
 
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });

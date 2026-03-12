@@ -2,3 +2,6 @@ project_id = "rphnilctdideitqdhksx"
 
 [functions.send-contact-email]
 verify_jwt = false
+
+[functions.send-scholarship-email]
+verify_jwt = false
