@@ -8,12 +8,12 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCZGOiFdy9175er9-NkYN6WzMyCrm0GQE8",
-  authDomain: "bizstarts-daca4.firebaseapp.com",
-  projectId: "bizstarts-daca4",
-  storageBucket: "bizstarts-daca4.firebasestorage.app",
-  messagingSenderId: "995516838969",
-  appId: "1:995516838969:web:11f9300539ec1b7e61e6ac" // Note: Retrieved via browser subagent from live init script
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
