@@ -22,7 +22,7 @@ const UtilityBar = () => (
       <div className="hidden md:flex items-center gap-4 font-barlow">
         <Link to="/programming" className="hover:text-teal transition-colors">BizStarts Institute</Link>
         <span className="text-primary-foreground/30">|</span>
-        <Link to="/scholarship" className="hover:text-teal transition-colors">GEORGE_MOSHER_LINK_V2</Link>
+        <Link to="/scholarship" className="hover:text-teal transition-colors">George Mosher Scholarship Fund</Link>
         <span className="text-primary-foreground/30">|</span>
         <Link to="/membership" className="hover:text-teal transition-colors">Become a Friend</Link>
         <span className="text-primary-foreground/30">|</span>
