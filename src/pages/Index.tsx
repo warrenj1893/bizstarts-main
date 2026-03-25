@@ -64,12 +64,12 @@ const sponsors = ["WEDC", "Wells Fargo", "Town Bank Wintrust", "LISC Milwaukee",
 
 
 const services = [
-  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_2.jpg", pos: "object-center" },
-  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "/images/img_15.jpg", pos: "object-center" },
-  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "/images/img_1.jpg", pos: "object-[center_30%]" },
-  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-[center_40%]" },
-  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-[center_20%]" },
-  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_30%]" },
+  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial bootcamp designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_2.jpg", pos: "object-center", link: "/programming" },
+  { icon: Sparkles, title: "First Launch", desc: "Teaching life skills and building the next generation of Milwaukee entrepreneurs.", img: "/images/img_15.jpg", pos: "object-center", link: "/first-launch" },
+  { icon: Wine, title: "Cocktails & Connections", desc: "Come for the learning, stay for the community.", img: "/images/img_1.jpg", pos: "object-[center_30%]", link: "/events" },
+  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-[center_40%]", link: "/coaching" },
+  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-[center_20%]", link: "/entrepreneurs" },
+  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_30%]", link: "/entrepreneurs" },
 ];
 
 const Index = () => {
@@ -116,14 +116,11 @@ const Index = () => {
 
         <div className="relative z-10 container px-8 pb-24 pt-48">
           <ScrollReveal>
-            <p className="font-barlow font-semibold text-gold uppercase tracking-[0.3em] text-sm mb-5">
-              You Are Our Mission
-            </p>
             <h1
               className="font-headline font-bold uppercase text-primary-foreground leading-[0.92] max-w-4xl"
               style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.01em" }}
             >
-              Creating Opportunities<br />Through<br /><span className="text-teal">Entrepreneurship</span>
+              Creating Opportunities<br />Through<br /><span className="text-gold">Entrepreneurship</span>
             </h1>
             <p className="mt-8 text-primary-foreground/65 font-body text-xl max-w-lg leading-relaxed">
               Whether your business is in the pre-revenue stage or your doors are already open, we provide structured guidance to clear the path for your next step forward!
@@ -172,7 +169,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 130}>
-                <div className="group flex flex-col overflow-hidden rounded-3xl shadow-xl h-[420px] bg-navy transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-primary-foreground/5">
+                <Link to={s.link} className="group flex flex-col overflow-hidden rounded-3xl shadow-xl h-[420px] bg-navy transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-primary-foreground/5">
                   {/* Image Header */}
                   <div className="relative h-[210px] w-full overflow-hidden shrink-0 bg-off-white">
                     <img
@@ -199,7 +196,7 @@ const Index = () => {
                       {s.desc}
                     </p>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
