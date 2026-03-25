@@ -64,12 +64,12 @@ const sponsors = ["WEDC", "Wells Fargo", "Town Bank Wintrust", "LISC Milwaukee",
 
 
 const services = [
-  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_36.jpg", pos: "object-[center_30%]" },
-  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "/images/img_10.jpg", pos: "object-[center_20%]" },
-  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "/images/img_35.jpg", pos: "object-center" },
-  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-bottom" },
-  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-[center_90%]" },
-  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_60%]" },
+  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_2.jpg", pos: "object-top" },
+  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "/images/img_15.jpg", pos: "object-top" },
+  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "/images/img_1.jpg", pos: "object-[center_15%]" },
+  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-top" },
+  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-top" },
+  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_20%]" },
 ];
 
 const Index = () => {
