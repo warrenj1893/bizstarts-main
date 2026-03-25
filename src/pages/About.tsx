@@ -8,9 +8,9 @@ import { useState } from "react";
 import { coaches } from "@/data/coaches";
 
 const staff = [
-  { name: "Patrick Snyder", title: "President", img: "/images/img_41.jpg" },
-  { name: "Lily Dysart", title: "Senior Operations Director", img: "/images/img_40.jpg" },
-  { name: "Reynaldo Rivera-Gonzalez", title: "Director of Education", img: "/images/img_39.jpg" },
+  { name: "Patrick Snyder", title: "President", img: "/images/patrick.jpg" },
+  { name: "Lily Dysart", title: "Senior Operations Director", img: "/images/lily.jpg" },
+  { name: "Reynaldo Rivera-Gonzalez", title: "Director of Education", img: "/images/ray.jpg" },
 ];
 
 

@@ -29,7 +29,7 @@ export const coaches: Coach[] = [
     name: "Brent Halfwassen",
     tag: "Finance & Operations",
     accent: "bg-gold",
-    img: "/images/img_39.jpg",
+    img: "/images/brent.jpg",
     bio: "Brent Halfwassen is an experienced business owner and operator, and possesses invaluable first-hand experience with the challenges and successes of business ownership. As a four-time business owner himself, Brent understands the critical importance of aligning vision, implementing effective processes, and building the right team to drive business growth.",
   },
   {
