@@ -105,7 +105,7 @@ const Index = () => {
       {/* ── HERO — cinematic, full-viewport, left-anchored ── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <img
-          src="/images/hero_home_final.jpg"
+          src="/images/hero_home_final.png"
           alt="Entrepreneur working"
           className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
         />
