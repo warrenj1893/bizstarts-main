@@ -188,24 +188,25 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {programs.map((p, i) => (
               <ScrollReveal key={p.title} delay={i * 120}>
-                <Link to={p.link} className="group block relative rounded-2xl overflow-hidden shadow-xl h-[420px]">
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="w-10 h-10 rounded-full bg-teal flex items-center justify-center mb-4">
+                <Link to={p.link} className="group flex flex-col rounded-2xl overflow-hidden shadow-xl h-[420px] bg-navy transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-primary-foreground/5">
+                  <div className="relative h-[210px] w-full overflow-hidden shrink-0 bg-off-white">
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="relative flex-1 p-8 flex flex-col justify-start bg-navy">
+                    <div className="w-12 h-12 rounded-full bg-teal flex items-center justify-center absolute -top-6 right-6 shadow-lg border-4 border-navy group-hover:-translate-y-1 transition-transform duration-300">
                       <p.icon size={20} className="text-primary-foreground" />
                     </div>
-                    <h3 className="font-headline text-2xl font-bold uppercase text-primary-foreground leading-tight">
+                    <h3 className="font-headline text-2xl font-bold uppercase text-primary-foreground leading-tight pr-10">
                       {p.title}
                     </h3>
-                    <p className="mt-2 text-primary-foreground/60 font-body text-sm line-clamp-3">
+                    <p className="mt-3 text-primary-foreground/75 font-body text-sm line-clamp-3">
                       {p.desc}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm group-hover:gap-4 transition-all">
+                    <span className="mt-auto inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm group-hover:gap-4 transition-all pt-4">
                       Learn More <ArrowRight size={14} />
                     </span>
                   </div>

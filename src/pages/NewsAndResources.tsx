@@ -169,29 +169,30 @@ const NewsAndResources = () => (
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {grid.slice(0, 2).map((p, i) => (
             <ScrollReveal key={p.title} delay={i * 100}>
-              <article className="group relative overflow-hidden rounded-2xl shadow-lg h-[420px] cursor-pointer">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
+              <article className="group flex flex-col overflow-hidden rounded-2xl shadow-lg h-[420px] cursor-pointer bg-navy transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-primary-foreground/5">
+                <div className="relative h-[210px] w-full overflow-hidden shrink-0 bg-off-white">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
                   <span
-                    className={`font-barlow font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full ${catColors[p.cat]}`}
+                    className={`absolute top-4 left-4 font-barlow font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full ${catColors[p.cat]}`}
                   >
                     {p.cat}
                   </span>
-                  <h3 className="mt-3 font-headline text-2xl font-bold uppercase text-white leading-tight">
+                </div>
+                <div className="relative flex-1 p-8 flex flex-col justify-start bg-navy">
+                  <h3 className="font-headline text-2xl font-bold uppercase text-white leading-tight">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-white/70 font-body text-sm line-clamp-2">
+                  <p className="mt-3 text-white/75 font-body text-sm line-clamp-3">
                     {p.excerpt}
                   </p>
                   <a
                     href={(p as any).link || "#"}
                     target={(p as any).link?.startsWith("http") ? "_blank" : undefined}
-                    className="mt-4 inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm"
+                    className="mt-auto inline-flex items-center gap-2 font-barlow font-semibold text-teal text-sm pt-4 hover:gap-4 transition-all"
                   >
                     { (p as any).link?.startsWith("http") ? "Visit Site →" : "Read More →" }
                   </a>
