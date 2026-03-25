@@ -76,7 +76,7 @@ const Coaching = () => (
               <img
                 src={c.img}
                 alt={c.name}
-                className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                className={`absolute inset-0 w-full h-full object-cover ${c.pos || "object-top"} group-hover:scale-105 transition-transform duration-700`}
               />
               {/* Bottom color bar */}
               <div className={`absolute bottom-0 left-0 right-0 h-1.5 ${c.accent}`} />
