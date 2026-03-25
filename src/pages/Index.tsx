@@ -105,9 +105,9 @@ const Index = () => {
       {/* ── HERO — cinematic, full-viewport, left-anchored ── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <img
-          src="/images/hero_home_ac.png"
+          src="/images/hero_home_final.jpg"
           alt="Entrepreneur working"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
         />
         {/* Gradient: clear top → dark navy bottom for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/10" />
