@@ -63,7 +63,7 @@ const Entrepreneurs = () => (
     {/* Hero — full bleed with bold left-aligned type */}
     <section className="relative min-h-[90vh] flex items-end overflow-hidden">
       <img
-        src="/images/img_35.jpg"
+        src="/images/img_8.jpg"
         alt="Entrepreneur at work"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

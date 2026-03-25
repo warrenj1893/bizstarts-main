@@ -45,7 +45,7 @@ const Contact = () => {
       {/* ── HERO ── */}
       <section className="bg-navy relative overflow-hidden min-h-[58vh] flex items-center">
         <img
-          src="/images/img_4.jpg"
+          src="/images/img_30.jpg"
           alt="BizStarts office"
           className="absolute inset-0 w-full h-full object-cover opacity-15"
         />
@@ -260,7 +260,7 @@ const Contact = () => {
 
                 <div className="relative rounded-xl overflow-hidden h-36 mt-auto">
                   <img
-                    src="/images/img_35.jpg"
+                    src="/images/img_26.jpg"
                     alt="Milwaukee"
                     className="w-full h-full object-cover opacity-50"
                   />

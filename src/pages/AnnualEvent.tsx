@@ -22,7 +22,7 @@ export default function AnnualEvent() {
     <div className="pt-24 min-h-screen bg-off-white font-body text-charcoal">
       {/* ── HERO HEADER ── */}
       <section className="bg-navy py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/img_15.jpg')] bg-cover bg-center opacity-20 Mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/images/img_2.jpg')] bg-cover bg-center opacity-20 Mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy to-navy/40" />
         
         <div className="container relative z-10 text-center max-w-4xl text-primary-foreground">
