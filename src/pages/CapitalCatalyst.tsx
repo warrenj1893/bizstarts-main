@@ -45,7 +45,7 @@ const CapitalCatalyst = () => (
       <img
         src="/images/img_4.jpg"
         alt="Startup growth"
-        className="absolute inset-0 w-full h-full object-cover opacity-15"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-15"
       />
       {/* Gold diagonal accent */}
       <div

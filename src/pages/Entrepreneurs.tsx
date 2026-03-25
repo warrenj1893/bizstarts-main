@@ -65,7 +65,7 @@ const Entrepreneurs = () => (
       <img
         src="/images/img_35.jpg"
         alt="Entrepreneur at work"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       {/* Layered overlays — darker at bottom for text legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
@@ -206,7 +206,7 @@ const Entrepreneurs = () => (
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/10 transition-colors duration-500" />
                   {/* Free tag */}

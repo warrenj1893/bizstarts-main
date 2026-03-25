@@ -43,7 +43,7 @@ const InstitutoLatino = () => {
         <img
           src="/images/img_22.jpg"
           alt="Instituto Latino de BizStarts"
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover object-[center_35%] opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/65 to-transparent" />
         {/* Gold left bar — distinguishes this page from the English version */}

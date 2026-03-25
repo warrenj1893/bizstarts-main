@@ -9,7 +9,7 @@ const Membership = () => {
         <img
           src="/images/img_15.jpg"
           alt="Community members"
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover object-top opacity-20"
         />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-teal" />
