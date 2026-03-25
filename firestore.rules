@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Rules for scholarship testimonials
+    match /scholarship_testimonials/{testimonial} {
+      // Allow anyone to read existing testimonials
+      allow read: if true;
+      
+      // Allow anyone to create a testimonial, but only if they follow the schema
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'title', 'quote', 'createdAt', 'approved'])
+                   && request.resource.data.name is string
+                   && request.resource.data.email is string
+                   && request.resource.data.title is string
+                   && request.resource.data.quote is string
+                   && request.resource.data.createdAt is timestamp
+                   && request.resource.data.approved == true
+                   && request.resource.data.quote.size() > 0
+                   && request.resource.data.quote.size() < 2000;
+      
+      // Deny update and delete by default (can only be done via Firebase Console)
+      allow update, delete: if false;
+    }
+    
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
