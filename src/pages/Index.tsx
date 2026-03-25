@@ -64,12 +64,12 @@ const sponsors = ["WEDC", "Wells Fargo", "Town Bank Wintrust", "LISC Milwaukee",
 
 
 const services = [
-  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_2.jpg", pos: "object-top" },
-  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "/images/img_15.jpg", pos: "object-top" },
-  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "/images/img_1.jpg", pos: "object-[center_15%]" },
-  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-top" },
-  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-top" },
-  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_20%]" },
+  { icon: GraduationCap, title: "BizStarts Institute", desc: "Hands-on entrepreneurial education designed for new and growing business owners. Six weeks. Real results.", img: "/images/img_2.jpg", pos: "object-center" },
+  { icon: Sparkles, title: "First Launch", desc: "An entrepreneurship summer camp designed for middle school students — building the next generation of Milwaukee business owners.", img: "/images/img_15.jpg", pos: "object-center" },
+  { icon: Wine, title: "Cocktails & Connections", desc: "A casual, hands-on workshop series pairing professional development with real relationship-building. Come for the learning, stay for the conversations.", img: "/images/img_1.jpg", pos: "object-[center_30%]" },
+  { icon: Handshake, title: "Coaching", desc: "Work with a business coach to explore your ideas and challenges, then create an actionable plan to gain traction in your business.", img: "/images/img_32.jpg", pos: "object-[center_40%]" },
+  { icon: Building, title: "Hometown Heroes", desc: "Empowering local businesses to thrive and make a lasting impact in their neighborhoods.", img: "/images/img_18.jpg", pos: "object-[center_20%]" },
+  { icon: ShoppingBag, title: "Retail Resources", desc: "Equipping retail entrepreneurs with the tools and strategies they need to succeed in today's market.", img: "/images/img_5.jpg", pos: "object-[center_30%]" },
 ];
 
 const Index = () => {
@@ -172,29 +172,30 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 130}>
-                <div className="group relative overflow-hidden rounded-3xl shadow-xl h-[420px] bg-card">
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    className={`absolute inset-0 w-full h-full object-cover ${s.pos} group-hover:scale-110 transition-transform duration-700`}
-                  />
+                <div className="group flex flex-col overflow-hidden rounded-3xl shadow-xl h-[420px] bg-navy transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl border border-primary-foreground/5">
+                  {/* Image Header */}
+                  <div className="relative h-[210px] w-full overflow-hidden shrink-0 bg-off-white">
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      className={`w-full h-full object-cover ${s.pos} group-hover:scale-105 transition-transform duration-700`}
+                    />
+                  </div>
                   
-                  {/* Creative overlay at the bottom */}
-                  <div className="absolute inset-x-0 bottom-0 bg-navy/95 backdrop-blur-md border-t border-primary-foreground/10 p-6 pt-8 h-[220px] flex flex-col justify-start translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                    
+                  {/* Content Body */}
+                  <div className="relative flex-1 p-6 pt-9 flex flex-col justify-start bg-navy">
                     {/* Floating Icon */}
-                    <div className="absolute -top-7 left-6 w-14 h-14 rounded-full bg-teal flex items-center justify-center shadow-lg border-4 border-navy group-hover:-translate-y-1 transition-transform duration-300">
+                    <div className="absolute -top-7 left-6 w-14 h-14 rounded-full bg-teal flex items-center justify-center shadow-md border-4 border-navy group-hover:-translate-y-1 transition-transform duration-300">
                       <s.icon size={24} className="text-primary-foreground" />
                     </div>
 
-                    {/* Fixed height container for headers to ensure subtext aligns */}
-                    <div className="h-[60px] flex items-start">
+                    <div className="flex items-start mb-2">
                       <h3 className="font-headline text-xl lg:text-2xl font-bold uppercase text-primary-foreground leading-tight line-clamp-2">
                         {s.title}
                       </h3>
                     </div>
                     
-                    <p className="mt-2 text-primary-foreground/70 font-body text-sm leading-relaxed line-clamp-3">
+                    <p className="text-primary-foreground/75 font-body text-sm leading-relaxed line-clamp-3">
                       {s.desc}
                     </p>
                   </div>
